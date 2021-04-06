@@ -1,0 +1,18 @@
+// menu fill
+#mega-menu-wrap-menu-1 .mega-menu-toggle + #mega-menu-menu-1 {
+    background-color: #00000090;
+}
+
+// menu link
+#mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item > a.mega-menu-link {
+}
+
+// menu item
+#mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item {
+    border-bottom: 1px solid #9e9e9e6b;
+    padding: .5rem 0;
+}
+
+#mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item:first-child {
+    border: 0;
+}

@@ -1,0 +1,134 @@
+ /*** 
+ 
+ ====================================================================
+[ ----- SERVICES ----- ]
+ ====================================================================
+ 
+  ***/
+
+  .services{
+  	padding: 4rem 0;
+
+  	position: relative;
+
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	@include backgroundImage('bg-dichvu.jpg');
+
+  	.title-page {
+  		color: #fff;
+  	}
+
+
+  }
+
+
+  .service-item{
+  	background-color: #fff;
+
+  	padding: 1px;
+  	margin-bottom: 3rem;
+
+  	position: relative;
+
+  	transition: all .3s linear;
+
+  	top: 0;
+
+
+
+  	.post__item__img a img {
+  		height: 20rem;
+  	}
+
+
+  	.post__item__content h4 {
+  		margin-bottom: 1rem;
+  		justify-content: center;
+  		text-align: center;
+  	}
+
+  	.post__item__content h4 a {
+  		font-size: 1.5rem;
+  		font-family: var(--third-font);
+  	}
+
+  	.post__item__content {
+  		padding: 1rem;
+  	}
+
+  	.post_link {
+  		text-align: right;
+  		margin-top: 2rem;
+  		margin-bottom: .5rem;
+  	}
+
+  	.post_link a {
+  		display: inline-flex;
+  		width: 11rem;
+  		border: 1px solid var(--primary-color);
+  		font-size: 1.4rem;
+  		align-items: center;
+  		justify-content: center;
+  		height: 3rem;
+  		line-height: initial;
+  		background-color: var(--primary-color);
+  		color: #fff;
+  		border-radius: 3px;
+  	}
+
+  	.post_link a i {
+  		display: inline-block;
+  		margin-left: .5rem;
+  	}
+
+  	.post_link a:hover {
+  		background-color: var(--second-color);
+  		border-color: var(--second-color);
+  		color: #fff;
+  	}
+
+
+  	&:hover{
+  		top: -1rem;
+  		box-shadow: 1px 1px 2px 0px #fff, 1px 1px 1px 0px #fff, 1px 1px 5px 1px #fff;
+
+
+  		.post_link a {
+  			background-color: var(--second-color);
+  			border-color: var(--second-color);
+  			color: #fff;
+  		}
+
+  	}
+
+
+  }
+
+
+  .services-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.services-link a {
+    display: inline-flex;
+    background-color: var(--second-color);
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+    width: 14rem;
+    color: #fff;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: var(--third-font);
+}
+
+.services-link a i {
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.services-link a:hover {
+    background-color: var(--primary-color);
+}

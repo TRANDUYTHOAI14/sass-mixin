@@ -1,0 +1,131 @@
+ /*** 
+ 
+ ====================================================================
+Archive Page
+ ====================================================================
+ 
+  ***/
+
+
+  .archive-page {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+
+
+
+// archive - post ngang
+
+.list-article-content{
+
+
+ .post__item {
+  display: flex;
+  margin-bottom: 3rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  transition: all .3s linear;
+
+  &:hover{
+   box-shadow: 1px 1px 4px 0px #99999975;
+ }
+}
+
+.post__item__img {
+  flex: 0 0 30rem;
+}
+
+.post__item__img a img {
+  height: 18rem;
+}
+
+.post__item__content{
+  padding: 2rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.post__item__content h4 {
+  justify-content: flex-start;
+  margin: 0;
+  height: auto;
+}
+
+.post__item__content h4 a {
+  font-size: 1.8rem;
+  font-family: var(--second-font);
+}
+
+
+
+
+
+
+}
+
+
+.heading-archive {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+}
+
+.heading-archive h1 {
+  font-family: var(--second-font);
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+
+
+/*---------------- TABLET RESPONSIVE ------------------*/
+@media (max-width:768px) {
+  .list-article-content.blog-posts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .list-article-content .post__item {
+    flex-flow: column wrap;
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+
+  .list-article-content .post__item__img {
+    flex: 0;
+  }
+}
+
+
+/*---------------- MOBILE RESPONSIVE ------------------*/
+@media (max-width:575px) {
+  .list-article-content .post__item {
+    flex: 0 0 calc(50% - 5px);
+    max-width: calc(50% - 5px);
+    margin-bottom: 1rem;
+  }
+
+  .list-article-content .post__item__img a img {
+    height: 15rem;
+  }
+
+  .list-article-content .post__item__content p {
+    text-align: left;
+  }
+
+  .list-article-content .post__item__content h4 a {
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+
+  .list-article-content .post__item__content h4 {
+    margin-bottom: 1rem;
+  }
+
+  .list-article-content .post__item__content {
+    padding: 1rem.5rem;
+  }    
+}

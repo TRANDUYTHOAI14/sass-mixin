@@ -1,0 +1,36 @@
+
+/*** 
+ 
+ ====================================================================
+Pagination
+ ====================================================================
+ 
+  ***/
+
+
+.quatrang>a {
+
+    border: 1px solid #333;
+
+    padding: 3px 10px;
+
+    color: #333;
+
+    margin: 0 3px;
+
+}
+
+
+
+span.page-numbers.current {
+
+    background-color: var(--primary-color);
+
+    color: #fff;
+
+    padding: 4px 11px;
+
+    margin: 0 3px;
+
+}
+

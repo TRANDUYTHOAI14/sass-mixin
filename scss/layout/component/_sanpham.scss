@@ -1,0 +1,96 @@
+ /*** 
+ 
+ ====================================================================
+[ ----- PRODUCTS ----- ]
+ ====================================================================
+ 
+  ***/
+
+ .product {
+     padding: 4rem 0;
+     position: relative;
+
+     @include backgroundImage('bg-dichvu.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+
+
+     .title-page {
+         color: #fff;
+     }
+
+
+     .post__item__img a img {
+         height: 21rem;
+     }
+
+     .post__item {
+         background-color: #fff;
+         border-radius: 5px;
+     }
+
+     .post__item__content {
+         padding: 2rem;
+     }
+
+     .post__item__content h4 a {
+         font-family: var(--third-font);
+     }
+
+     .post__item__content h4 {
+         text-align: center;
+     }
+
+     .post-link a {
+         color: var(--primary-color);
+         font-family: var(--third-font);
+     }
+
+     .post-link a:hover {
+         color: #000;
+     }
+
+     .post-link {
+         margin-top: 2rem;
+     }
+
+
+     .owl-nav {
+         justify-content: center;
+         color: #000;
+         display: flex;
+         margin-top: 3rem;
+     }
+
+     .owl-carousel .owl-nav button.owl-next,
+     .owl-carousel .owl-nav button.owl-prev,
+     .owl-carousel button.owl-dot {
+         color: #fff;
+         width: 3.5rem;
+         height: 3.5rem;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: var(--primary-color);
+         font-size: 2.5rem;
+         line-height: initial;
+         margin-right: 2rem;
+         outline: 1px solid #fff;
+         transition: all .3s linear;
+     }
+
+     .owl-carousel .owl-nav button.owl-next span,
+     .owl-carousel .owl-nav button.owl-prev span,
+     .owl-carousel button.owl-dot span {
+         line-height: initial;
+         position: relative;
+         top: -2px;
+     }
+
+     .owl-nav button:hover {
+         background-color: var(--second-color) !important;
+         outline-offset: -3px;
+     }
+
+
+ }

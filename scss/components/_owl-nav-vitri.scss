@@ -1,0 +1,48 @@
+// ------------------------- Vi tri cua Owl Nav Owlcarousel --------------------
+#id_owlcarousel{
+    .owl-nav {
+        position: absolute;
+        top: 35%;
+        margin: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .owl-nav button:first-child {
+        left: -50px;
+        position: absolute;
+    }
+
+    .owl-nav button:last-child {
+        position: absolute;
+        right: -50px;
+    }
+
+    .owl-nav button span {
+        position: relative;
+        top: -4px;
+        font-size: 5rem;
+        line-height: 0;
+    }
+    .owl-nav button:focus, .owl-nav button:hover{
+        outline: none;
+        background-color: transparent;
+
+    }
+    .owl-nav [class*=owl-]:hover,#product_top-slider .owl-nav [class*=owl-]:focus{
+        background-color: transparent;
+        color: var(--primary-color);
+    }
+    .owl-nav [class*=owl-]{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 3rem;
+        height: 3rem;
+        font-size: 3rem;
+        border-radius: 0;
+        line-height: initial;
+        position: relative;
+    }
+}

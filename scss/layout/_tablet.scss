@@ -1,0 +1,28 @@
+/*------------- TABLET  STYLE ---------------------*/
+
+@include tablet{
+
+
+.about-left__top p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-left__bottom ul li span {
+    font-size: 1.4rem;
+}
+
+.about-left__bottom ul li {
+    text-align: center;
+}
+
+.why-item {
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+
+}  // TABLET LANDSCAPE

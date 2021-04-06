@@ -1,0 +1,35 @@
+ /*** 
+ 
+ ====================================================================
+[ ----- HEADER TOP ----- ]
+ ====================================================================
+ 
+  ***/
+
+  .header-top {
+  	background-color: var(--primary-color);
+
+  	color: #fff;
+  	font-size: 1.3rem;
+
+  	padding: .7rem 0;
+
+  	ul{
+  		@include resetList;
+
+  		display: flex;
+  		align-items: center;
+
+  		li {
+  			margin-right: 4rem;
+
+  			i {
+  				display: inline-block;
+  				margin-right: .5rem;
+  			}
+  		}
+  	}
+
+  }
+
+

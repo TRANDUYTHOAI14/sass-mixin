@@ -1,0 +1,60 @@
+ /*** 
+ 
+ ====================================================================
+[ ----- title ----- ]
+ ====================================================================
+ 
+  ***/
+
+  .title-page {
+  	text-align: center;
+  	margin-bottom: 4rem;
+
+  	h2 {
+  		font-size: 3rem;
+  		font-family: var(--second-font);
+  		text-transform: uppercase;
+  		margin-top: 1rem;
+  	}
+
+  	span {
+  		font-size: 1.7rem;
+  		text-transform: capitalize;
+  	}
+
+  	
+  }
+
+
+
+
+  .page-title-2 {
+    margin-bottom: 4rem;
+    position: relative;
+    padding-top: 2rem;
+    padding-left: 3rem;
+
+    span{
+      color: #888;
+      text-transform: capitalize;
+    }
+
+    & > span:first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    h2 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-family: var(--second-font);
+    }
+
+    h2 strong {
+      color: var(--primary-color);
+    }
+
+  }
+
+

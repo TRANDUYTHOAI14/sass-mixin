@@ -1,0 +1,56 @@
+
+/*** 
+ 
+ ====================================================================
+Single Page
+ ====================================================================
+ 
+  ***/
+
+
+  .single__item__title h4 a {
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    -webkit-transition: all .3s;
+
+    -o-transition: all .3s;
+
+    transition: all .3s;
+
+    overflow: hidden;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+    -o-text-overflow: ellipsis;
+
+    text-overflow: ellipsis;
+
+}
+
+
+
+.single-page {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+h1._title_single_post {
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    font-family: var(--second-font);
+}
+
+
+@media (max-width:575px) {
+    h1._title_single_post {
+        font-size: 2rem;
+    }        
+}

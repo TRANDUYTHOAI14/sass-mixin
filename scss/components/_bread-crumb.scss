@@ -1,0 +1,60 @@
+
+/*** 
+ 
+ ====================================================================
+Bread Crumb
+ ====================================================================
+ 
+  ***/
+
+
+
+/*Archive Page*/
+
+.breadcrumb-style {
+
+    display: -ms-flexbox;
+
+    display: -webkit-box;
+
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+
+    flex-wrap: wrap;
+
+    list-style: none;
+
+    background-color: #e9ecef;
+
+}
+
+ul#crumbs>i {
+
+    margin: 0 6px;
+
+}
+
+
+
+ul#crumbs {
+
+    -webkit-box-align: center;
+
+    -ms-flex-align: center;
+
+    align-items: center;
+
+    background-color: #c1c1c100;
+
+    padding: 10px 0;
+
+    margin-bottom: 0;
+
+    font-size: 1.4rem;
+
+}
+
+ul#crumbs a {
+    font-size: 1.4rem;
+}

@@ -1,0 +1,93 @@
+/*** 
+
+ ====================================================================
+Back To Top
+ ====================================================================
+
+ ***/
+
+a.cd-top {
+    &.cd-is-visible {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    color: #CCCCCC;
+    text-decoration: none;
+
+    &:visited,
+    &:hover {
+        color: #CCCCCC;
+        text-decoration: none;
+    }
+
+    &.cd-is-visible,
+    &.cd-fade-out {
+        -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+        -o-transition: opacity 0.3s 0s, visibility 0s 0s;
+        transition: opacity 0.3s 0s, visibility 0s 0s;
+    }
+}
+
+.no-touch a.cd-top:hover {
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+    -o-transition: opacity 0.3s 0s, visibility 0s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+a.cd-top {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff !important;
+    height: 40px;
+    width: 40px;
+    font-size: 2.5rem;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    white-space: nowrap;
+    background: var(--primary-color);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    -o-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+
+    &.cd-is-visible,
+    &.cd-fade-out {
+        -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+        -o-transition: opacity 0.3s 0s, visibility 0s 0s;
+        transition: opacity 0.3s 0s, visibility 0s 0s;
+    }
+}
+
+.no-touch a.cd-top:hover {
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+    -o-transition: opacity 0.3s 0s, visibility 0s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+a.cd-top {
+    color: #CCCCCC;
+    text-decoration: none;
+
+    &:visited,
+    &:hover {
+        color: #CCCCCC;
+        text-decoration: none;
+    }
+
+    &.cd-is-visible {
+        /* the button becomes visible */
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &.cd-fade-out {
+        opacity: 1;
+    }
+}

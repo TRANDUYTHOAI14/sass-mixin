@@ -1,0 +1,36 @@
+ /*** 
+ 
+ ====================================================================
+[ ----- FEATURES ----- ]
+ ====================================================================
+ 
+  ***/
+
+  .feature {
+  	position: relative;
+  	padding: 4rem 0;
+  }
+
+  .feature-item{
+
+  	text-align: center;
+
+  	i {
+  		font-size: 5rem;
+  		color: var(--primary-color);
+  		display: inline-flex;
+  		margin-bottom: 2rem;
+  	}
+
+  	h3 {
+  		font-size: 1.8rem;
+  		font-family: var(--second-font);
+  		margin-bottom: 1.5rem;
+  		text-transform: uppercase;
+  	}
+
+  	span {
+  		font-size: 1.5rem;
+  		color: #777;
+  	}
+  }

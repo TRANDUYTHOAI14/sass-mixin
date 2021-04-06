@@ -1,0 +1,303 @@
+// Small devices (portrait phones, less than 576px)
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin mobile-landscape {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin tablet {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin desktop {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+
+
+
+// --------------- OVER LAY -------------
+@mixin overlay() {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to bottom, rgba(72,76,97,0) 56%, rgb(0 0 0 / 85%) 76%);
+  z-index: 1;
+}
+
+
+// ------------- GIOI HAN DONG -------------
+@mixin gioihangdong($sodong: 3) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $sodong;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+// ------------- GRADIENT --------------
+@mixin gradient($color1, $color2, $ngangDoc) {
+  background: $color1;
+  @if $ngangDoc == "vertical" {
+    background: -webkit-linear-gradient(top, $color1, $color2);
+    background: linear-gradient(to bottom, $color1, $color2);
+  } @else if $ngangDoc == "horizontal" {
+    background: -webkit-linear-gradient(left, $color1, $color2);
+    background: linear-gradient(to right, $color1, $color2);
+  } @else {
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      $color1,
+      $color2
+      );
+    background: radial-gradient(ellipse at center, $color1, $color2);
+  }
+}
+
+
+// ------------- Cover Background --------------
+@mixin background($repeat: no-repeat,$cover: cover,$position: center) {
+  background-repeat: $repeat;
+  background-size: $cover;
+  background-position: $position;
+}
+
+@mixin backgroundImage($tenfile) {
+  background-image: url('assets/images/home/'+ $tenfile);
+}
+
+//  2/ Text outline
+@mixin text-outline($doday, $color) {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+// 5/ reset ul
+@mixin resetList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+// ------------- flex toolkit ------------
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}
+
+@mixin flex-center-vert {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horiz {
+  display: flex;
+  justify-content: center;
+}
+
+// --------------- FONT SIZE ----------
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+  font-size: $font-size * 1px;
+  // font-size: $font-size * 0.1rem; 
+  // example using rem values and 62.5% font-size so 1rem = 10px
+
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height / $font-size;
+  }
+
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: #{$letter-spacing / $font-size}em;
+  }
+}
+
+// --------------- FONT FACE -----------
+@mixin font-face($font-name, $path) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($path);
+  }
+}
+
+// ------------- PSEUDO --------------
+@mixin pseudo(
+  $content: "",
+
+  $display: inline-block,
+
+  $width: 100%,
+  $height: 100%,
+
+  $position: absolute,
+
+  $fontSize: initial,
+  $fontFamily: initial,
+
+  $color: red,
+  ){
+  content: $content;
+
+  display: $display;
+
+  width: $width;
+  height: $height;
+
+  position: $position;
+
+  font-size: $fontSize;
+  font-family: $fontFamily;
+
+  color: $color
+
+}
+
+
+// ----------- SHOW / HIDE -----------------
+
+@mixin fade($type) {
+  @if $type== "hide" {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s linear;
+  } @else if $type== "show" {
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s linear;
+  }
+}
+
+
+// ----------- POSITION CENTER --------------
+
+@mixin position($position: relative,$top: 0,$left: 0,$right: initial, $bottom: initial, $translateX: 0,$translateY: 0) {
+ position: $position;
+
+ top: $top;
+ bottom: $bottom;
+ left: $left;
+ right: $right;
+
+ transform: translate($translateX, $translateY);
+}
+
+
+// ------------- TAM GIAC ---------------
+@mixin muitentamgiac($direction: duoi, $size: 5px, $color: #555) {
+ width: 0;
+ height: 0;
+
+ @if ($direction == trai) {
+  border-top: $size solid transparent;
+  border-bottom: $size solid transparent; 
+  border-right: $size solid $color;
+}
+@else if ($direction == phai) {
+  border-top: $size solid transparent;
+  border-bottom: $size solid transparent; 
+  border-left: $size solid $color;
+}
+@else if ($direction == duoi) {
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-top: $size solid $color;
+}
+@else {
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-bottom: $size solid $color;
+}
+}
+
+
+// ------------- HEADING FONT SIZE --------------
+@mixin title($size:2.5rem,$font: var(--second-font)) {
+  font-size: $size;
+  font-family: $font;
+
+  @include mobile{
+    font-size: calc(2.5rem * 0.72);
+  }
+
+}
+
+
+// ----------- SPACING -------------
+
+@mixin padding($top: initial, $bottom: initial, $left: initial, $right: initial) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+
+
+// --------------- BUTTON --------------
+@mixin button($width: 10rem, $height: 4rem, $position: relative, $color: #fff, $backgroundColor: var(--primary-color), $fontSize: initial, $borderRadius: 3px) {
+  width: $width;
+  height: $height;
+
+  position: $position;
+
+  color: $color;
+  background-color: $backgroundColor;
+
+  font-size: $fontSize;
+
+  border-radius: $borderRadius;
+}
+
+
+
+// ----------- PLACEHOLDER ------------
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+
+// ------------ OPACITY -----------
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity = $opacity-ie); //IE8
+}

@@ -1,0 +1,39 @@
+// ----------------- BUTTON STYLE ---------------------
+a.btn-dt {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  line-height: initial;
+
+  transition: all 280ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include button;
+
+  &::before{
+      content: "\f105";
+      font-family: 'fontawesome';
+      display: inline-block;
+      margin-right: .5rem;
+      display: none;
+  }
+
+  &::after{
+      content: "\f105";
+      font-family: 'fontawesome';
+      display: inline-block;
+      margin-left: .5rem;
+      display: none;
+  }
+
+  
+
+
+  &:hover {
+    color: #000;
+    background-color: var(--second-color);
+
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  }
+}
